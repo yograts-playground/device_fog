@@ -12,12 +12,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 
-# Inherit GMS if available
-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
-
-TARGET_INCLUDE_GRAMOPHONE := true
-TARGET_INCLUDE_GRAPHENE_CAMERA := true
-
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
@@ -26,6 +20,9 @@ PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
+
+# EvolutionX Stuff
+# empty 
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
